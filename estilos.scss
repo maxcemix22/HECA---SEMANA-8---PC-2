@@ -1,0 +1,65 @@
+$color-base: rgb(83, 6, 6); 
+
+$tipos-alerta:(
+    "info": 40%,
+    "success": 25%,
+    "warning": 10%,
+    "danger": 0%
+);
+
+@each $nombre, $porcentaje in $tipos-alerta{
+    $color: lighten($color-base, $porcentaje);
+
+    .alert-#{$nombre}{
+        background-color: lighten($color, 30%);
+        border-left: 5px solid $color;
+        color: darken($color, 20%);
+        padding: 14px 18px;
+        margin-bottom: 12px;
+        border-radius: 6px;
+        font-family: sans-serif;
+
+
+        @if $nombre == "danger" {
+        border: 2px solid $color;
+        animation: animacion-warning 1.2s infinite;
+        }
+    }
+}
+@keyframes animacion-warning {
+    0%   { box-shadow: 0 0 0 0 rgba($color-base, 0.6); }
+    70%  { box-shadow: 0 0 0 10px rgba($color-base, 0); }
+    100% { box-shadow: 0 0 0 0 rgba($color-base, 0); }
+}
+
+$colores-tarjetas: #3389fa, #202dd8, #9b19e6;
+
+.precios {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+@for $i from 1 through 3 { 
+    $fondo: nth($colores-tarjetas,$i);
+
+    .card-#{$i} {
+        background-color: $fondo;
+        color: contraste($fondo);
+        font-size: 1rem + ($i * 0.25rem);
+        box-shadow: 0 (2px * $i) (6px * $i) rgba(0, 0, 0, 0.10 * $i);
+        width: 200px;
+        padding: 24px;
+        border-radius: 10px;
+        text-align: center;
+    }
+}
+
+@function contraste($color) {
+    @if (lightness($color) > 50%) {
+        @return #000; 
+    } @else {
+        @return #fff;
+    }
+}

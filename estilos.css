@@ -1,0 +1,92 @@
+.alert-info {
+  background-color: rgb(250.6853932584, 195.3146067416, 195.3146067416);
+  border-left: 5px solid rgb(240.3707865169, 52.6292134831, 52.6292134831);
+  color: rgb(178.1235955056, 12.8764044944, 12.8764044944);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  font-family: sans-serif;
+}
+
+.alert-success {
+  background-color: rgb(245.5280898876, 123.9719101124, 123.9719101124);
+  border-left: 5px solid rgb(201.904494382, 14.595505618, 14.595505618);
+  color: rgb(106.7808988764, 7.7191011236, 7.7191011236);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  font-family: sans-serif;
+}
+
+.alert-warning {
+  background-color: rgb(240.3707865169, 52.6292134831, 52.6292134831);
+  border-left: 5px solid rgb(130.5617977528, 9.4382022472, 9.4382022472);
+  color: rgb(35.4382022472, 2.5617977528, 2.5617977528);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  font-family: sans-serif;
+}
+
+.alert-danger {
+  background-color: rgb(225.6853932584, 16.3146067416, 16.3146067416);
+  border-left: 5px solid #530606;
+  color: black;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  font-family: sans-serif;
+  border: 2px solid #530606;
+  animation: animacion-warning 1.2s infinite;
+}
+
+@keyframes animacion-warning {
+  0% {
+    box-shadow: 0 0 0 0 rgba(83, 6, 6, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(83, 6, 6, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(83, 6, 6, 0);
+  }
+}
+.precios {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card-1 {
+  background-color: #3389fa;
+  color: contraste(#3389fa);
+  font-size: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 24px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card-2 {
+  background-color: #202dd8;
+  color: contraste(#202dd8);
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  padding: 24px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card-3 {
+  background-color: #9b19e6;
+  color: contraste(#9b19e6);
+  font-size: 1.75rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  padding: 24px;
+  border-radius: 10px;
+  text-align: center;
+}/*# sourceMappingURL=estilos.css.map */
